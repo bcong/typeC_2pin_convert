@@ -1,0 +1,594 @@
+(kicad_sch
+  (version 20231120)
+  (generator "kicad")
+  (generator_version "8.0")
+  (uuid "a1b2c3d4-e5f6-7890-abcd-ef1234567890")
+  (paper "A4")
+  (title_block
+    (title "USB-C Battery Charger")
+    (date "2026-05-14")
+    (rev "1.0")
+    (company "")
+    (comment 1 "5.1k CC resistors for USB-C 5V negotiation")
+    (comment 2 "J1=USB-C, J2=Battery 2pin, R1/R2=5.1k")
+  )
+
+  (lib_symbols
+    (symbol "Device:R"
+      (pin_numbers (hide yes))
+      (pin_names (offset 0))
+      (in_bom yes) (on_board yes)
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.286)
+          (end 1.016 2.286)
+          (stroke (width 0.2032) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.524)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.524)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+
+    (symbol "Connector_USB:USB_C_Receptacle"
+      (pin_numbers (hide no))
+      (pin_names (offset 1.016))
+      (in_bom yes) (on_board yes)
+      (symbol "USB_C_Receptacle_0_1"
+        (rectangle
+          (start -2.54 -8.89)
+          (end 2.54 8.89)
+          (stroke (width 0.2032) (type default))
+          (fill (type background))
+        )
+        (text "USB-C"
+          (at 0 0 0)
+          (effects (font (size 1.27 1.27)) (justify center))
+        )
+      )
+      (symbol "USB_C_Receptacle_1_1"
+        (pin power_in line
+          (at -7.62 6.35 0)
+          (length 5.08)
+          (name "VBUS" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line
+          (at -7.62 3.81 0)
+          (length 5.08)
+          (name "D-" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line
+          (at -7.62 1.27 0)
+          (length 5.08)
+          (name "D+" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line
+          (at -7.62 -1.27 0)
+          (length 5.08)
+          (name "CC1" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line
+          (at -7.62 -3.81 0)
+          (length 5.08)
+          (name "CC2" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27))))
+        )
+        (pin power_in line
+          (at -7.62 -6.35 0)
+          (length 5.08)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "6" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+
+    (symbol "Connector:Conn_01x02_Pin"
+      (pin_numbers (hide no))
+      (pin_names (offset 1.016) (hide yes))
+      (in_bom yes) (on_board yes)
+      (symbol "Conn_01x02_Pin_0_1"
+        (rectangle
+          (start 0 -2.794)
+          (end 1.524 2.794)
+          (stroke (width 0.2032) (type default))
+          (fill (type background))
+        )
+      )
+      (symbol "Conn_01x02_Pin_1_1"
+        (pin passive line
+          (at -3.81 1.27 0)
+          (length 3.81)
+          (name "Pin_1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line
+          (at -3.81 -1.27 0)
+          (length 3.81)
+          (name "Pin_2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+
+    (symbol "power:GND"
+      (pin_numbers (hide yes))
+      (pin_names (offset 0) (hide yes))
+      (in_bom no) (on_board no)
+      (symbol "GND_0_1"
+        (polyline
+          (pts (xy 0 0) (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts (xy -1.27 -1.27) (xy 1.27 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts (xy -0.762 -1.905) (xy 0.762 -1.905))
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts (xy -0.254 -2.54) (xy 0.254 -2.54))
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "GND_1_1"
+        (pin power_in line
+          (at 0 0 270)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+
+    (symbol "power:PWR_FLAG"
+      (pin_numbers (hide yes))
+      (pin_names (offset 0) (hide yes))
+      (in_bom no) (on_board no)
+      (symbol "PWR_FLAG_0_1"
+        (pin power_out line
+          (at 0 0 90)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+      (symbol "PWR_FLAG_1_1"
+        (polyline
+          (pts (xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+    )
+
+    (symbol "power:+5V"
+      (pin_numbers (hide yes))
+      (pin_names (offset 0) (hide yes))
+      (in_bom no) (on_board no)
+      (symbol "+5V_0_1"
+        (pin power_in line
+          (at 0 0 90)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+      (symbol "+5V_1_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+    )
+  )
+
+  ;; ─────────────────────────────────────────────────────────────────
+  ;; J1 : USB-C 6-pin SMT connector  (placed at 100, 80)
+  ;; Pin endpoints (absolute):
+  ;;   1 VBUS : (92.38, 86.35)
+  ;;   2 D-   : (92.38, 83.81)
+  ;;   3 D+   : (92.38, 81.27)
+  ;;   4 CC1  : (92.38, 78.73)
+  ;;   5 CC2  : (92.38, 76.19)
+  ;;   6 GND  : (92.38, 73.65)
+  ;; ─────────────────────────────────────────────────────────────────
+  (symbol
+    (lib_id "Connector_USB:USB_C_Receptacle")
+    (at 100 80 0)
+    (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid "11111111-1111-4111-8111-111111111101")
+    (property "Reference" "J1"
+      (at 104 70 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "USB_C_6Pin_Charger"
+      (at 104 72 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Connector_USB:USB_C_Receptacle_GCT_USB4085"
+      (at 100 80 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (property "Datasheet" ""
+      (at 100 80 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (pin "1" (uuid "11111111-1111-4111-8111-111111111111"))
+    (pin "2" (uuid "11111111-1111-4111-8111-111111111112"))
+    (pin "3" (uuid "11111111-1111-4111-8111-111111111113"))
+    (pin "4" (uuid "11111111-1111-4111-8111-111111111114"))
+    (pin "5" (uuid "11111111-1111-4111-8111-111111111115"))
+    (pin "6" (uuid "11111111-1111-4111-8111-111111111116"))
+  )
+
+  ;; ─────────────────────────────────────────────────────────────────
+  ;; R1 : 5.1kΩ (CC1 → GND)  placed at (75, 87.5)
+  ;; Pin 1 endpoint: (75, 91.31) [bottom, connects to CC1 side wire]
+  ;; Pin 2 endpoint: (75, 83.69) [top, connects to GND]
+  ;; ─────────────────────────────────────────────────────────────────
+  (symbol
+    (lib_id "Device:R")
+    (at 75 87.5 0)
+    (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid "22222222-2222-4222-8222-222222222201")
+    (property "Reference" "R1"
+      (at 77.5 85.5 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "5.1k"
+      (at 77.5 88 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0402"
+      (at 75 87.5 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (property "Datasheet" ""
+      (at 75 87.5 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (pin "1" (uuid "22222222-2222-4222-8222-222222222211"))
+    (pin "2" (uuid "22222222-2222-4222-8222-222222222212"))
+  )
+
+  ;; ─────────────────────────────────────────────────────────────────
+  ;; R2 : 5.1kΩ (CC2 → GND)  placed at (125, 87.5)
+  ;; Pin 1 endpoint: (125, 91.31)
+  ;; Pin 2 endpoint: (125, 83.69)
+  ;; ─────────────────────────────────────────────────────────────────
+  (symbol
+    (lib_id "Device:R")
+    (at 125 87.5 0)
+    (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid "33333333-3333-4333-8333-333333333301")
+    (property "Reference" "R2"
+      (at 127.5 85.5 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "5.1k"
+      (at 127.5 88 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0402"
+      (at 125 87.5 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (property "Datasheet" ""
+      (at 125 87.5 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (pin "1" (uuid "33333333-3333-4333-8333-333333333311"))
+    (pin "2" (uuid "33333333-3333-4333-8333-333333333312"))
+  )
+
+  ;; ─────────────────────────────────────────────────────────────────
+  ;; J2 : 2-pin battery connector  placed at (100, 135)
+  ;; Pin 1 endpoint: (96.19, 136.27) → VBUS/VBAT
+  ;; Pin 2 endpoint: (96.19, 133.73) → GND
+  ;; ─────────────────────────────────────────────────────────────────
+  (symbol
+    (lib_id "Connector:Conn_01x02_Pin")
+    (at 100 135 0)
+    (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid "44444444-4444-4444-8444-444444444401")
+    (property "Reference" "J2"
+      (at 104 130 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "Battery_Conn_2Pin"
+      (at 104 132 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+      (at 100 135 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (property "Datasheet" ""
+      (at 100 135 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (pin "1" (uuid "44444444-4444-4444-8444-444444444411"))
+    (pin "2" (uuid "44444444-4444-4444-8444-444444444412"))
+  )
+
+  ;; ─────────────────────────────────────────────────────────────────
+  ;; GND power symbols
+  ;; ─────────────────────────────────────────────────────────────────
+  (symbol
+    (lib_id "power:GND")
+    (at 75 95 0)
+    (unit 1)
+    (in_bom no) (on_board no)
+    (uuid "55555555-5555-4555-8555-555555555501")
+    (property "Reference" "#PWR01"
+      (at 75 98.5 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (property "Value" "GND"
+      (at 75 96.5 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (pin "1" (uuid "55555555-5555-4555-8555-555555555511"))
+  )
+
+  (symbol
+    (lib_id "power:GND")
+    (at 125 95 0)
+    (unit 1)
+    (in_bom no) (on_board no)
+    (uuid "55555555-5555-4555-8555-555555555502")
+    (property "Reference" "#PWR02"
+      (at 125 98.5 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (property "Value" "GND"
+      (at 125 96.5 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (pin "1" (uuid "55555555-5555-4555-8555-555555555512"))
+  )
+
+  (symbol
+    (lib_id "power:GND")
+    (at 92.38 70 0)
+    (unit 1)
+    (in_bom no) (on_board no)
+    (uuid "55555555-5555-4555-8555-555555555503")
+    (property "Reference" "#PWR03"
+      (at 92.38 73.5 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (property "Value" "GND"
+      (at 92.38 71.5 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (pin "1" (uuid "55555555-5555-4555-8555-555555555513"))
+  )
+
+  (symbol
+    (lib_id "power:GND")
+    (at 96.19 130 0)
+    (unit 1)
+    (in_bom no) (on_board no)
+    (uuid "55555555-5555-4555-8555-555555555504")
+    (property "Reference" "#PWR04"
+      (at 96.19 133.5 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (property "Value" "GND"
+      (at 96.19 131.5 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (pin "1" (uuid "55555555-5555-4555-8555-555555555514"))
+  )
+
+  ;; ─────────────────────────────────────────────────────────────────
+  ;; +5V (VBUS) power symbols
+  ;; ─────────────────────────────────────────────────────────────────
+  (symbol
+    (lib_id "power:+5V")
+    (at 92.38 83.81 0)
+    (unit 1)
+    (in_bom no) (on_board no)
+    (uuid "66666666-6666-4666-8666-666666666601")
+    (property "Reference" "#PWR05"
+      (at 92.38 87.5 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (property "Value" "+5V"
+      (at 94 85 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (pin "1" (uuid "66666666-6666-4666-8666-666666666611"))
+  )
+
+  (symbol
+    (lib_id "power:+5V")
+    (at 96.19 139.5 0)
+    (unit 1)
+    (in_bom no) (on_board no)
+    (uuid "66666666-6666-4666-8666-666666666602")
+    (property "Reference" "#PWR06"
+      (at 96.19 143 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (property "Value" "+5V"
+      (at 97.5 141 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (pin "1" (uuid "66666666-6666-4666-8666-666666666612"))
+  )
+
+  ;; PWR_FLAG to suppress ERC warnings
+  (symbol
+    (lib_id "power:PWR_FLAG")
+    (at 82.55 95 0)
+    (unit 1)
+    (in_bom no) (on_board no)
+    (uuid "77777777-7777-4777-8777-777777777701")
+    (property "Reference" "#PWR07"
+      (at 82.55 98.5 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (property "Value" "PWR_FLAG"
+      (at 82.55 96.5 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (pin "1" (uuid "77777777-7777-4777-8777-777777777711"))
+  )
+
+  ;; ─────────────────────────────────────────────────────────────────
+  ;; Wires
+  ;; ─────────────────────────────────────────────────────────────────
+
+  ;; J1 VBUS (pin1) at (92.38, 86.35) → short wire up → +5V power symbol at (92.38, 83.81)
+  (wire
+    (pts (xy 92.38 86.35) (xy 92.38 83.81))
+    (stroke (width 0) (type default))
+    (uuid "aaaa0001-aaaa-4aaa-8aaa-aaaaaaaaaaaa")
+  )
+
+  ;; J1 GND (pin6) at (92.38, 73.65) → short wire down → GND power at (92.38, 70)
+  (wire
+    (pts (xy 92.38 73.65) (xy 92.38 70))
+    (stroke (width 0) (type default))
+    (uuid "aaaa0002-aaaa-4aaa-8aaa-aaaaaaaaaaaa")
+  )
+
+  ;; J1 CC1 (pin4) at (92.38, 78.73) → wire left → R1 pin1 at (75, 91.31)
+  ;; Route: (92.38, 78.73) → (70, 78.73) → (70, 91.31) → (75, 91.31)
+  (wire
+    (pts (xy 92.38 78.73) (xy 70 78.73))
+    (stroke (width 0) (type default))
+    (uuid "aaaa0003-aaaa-4aaa-8aaa-aaaaaaaaaaaa")
+  )
+  (wire
+    (pts (xy 70 78.73) (xy 70 91.31))
+    (stroke (width 0) (type default))
+    (uuid "aaaa0004-aaaa-4aaa-8aaa-aaaaaaaaaaaa")
+  )
+  (wire
+    (pts (xy 70 91.31) (xy 75 91.31))
+    (stroke (width 0) (type default))
+    (uuid "aaaa0005-aaaa-4aaa-8aaa-aaaaaaaaaaaa")
+  )
+
+  ;; J1 CC2 (pin5) at (92.38, 76.19) → wire right → R2 pin1 at (125, 91.31)
+  ;; Route: (92.38, 76.19) → (130, 76.19) → (130, 91.31) → (125, 91.31)
+  (wire
+    (pts (xy 92.38 76.19) (xy 130 76.19))
+    (stroke (width 0) (type default))
+    (uuid "aaaa0006-aaaa-4aaa-8aaa-aaaaaaaaaaaa")
+  )
+  (wire
+    (pts (xy 130 76.19) (xy 130 91.31))
+    (stroke (width 0) (type default))
+    (uuid "aaaa0007-aaaa-4aaa-8aaa-aaaaaaaaaaaa")
+  )
+  (wire
+    (pts (xy 130 91.31) (xy 125 91.31))
+    (stroke (width 0) (type default))
+    (uuid "aaaa0008-aaaa-4aaa-8aaa-aaaaaaaaaaaa")
+  )
+
+  ;; R1 pin2 (GND top) at (75, 83.69) → up to GND power at (75, 95) reversed
+  ;; GND power pin is at (75, 95) pointing down (angle 270), connection at (75, 95)
+  ;; R1 pin2 is at (75, 83.69) → wire up to... wait, we need to connect to the GND net
+  ;; Simpler: wire from R1 pin2 (75, 83.69) down to GND symbol at (75, 95)
+  (wire
+    (pts (xy 75 83.69) (xy 75 95))
+    (stroke (width 0) (type default))
+    (uuid "aaaa0009-aaaa-4aaa-8aaa-aaaaaaaaaaaa")
+  )
+
+  ;; PWR_FLAG at (82.55, 95) → connect to GND bus at (82.55, 95)
+  ;; Draw a short wire from PWR_FLAG pin to GND net line
+  (wire
+    (pts (xy 82.55 95) (xy 75 95))
+    (stroke (width 0) (type default))
+    (uuid "aaaa000a-aaaa-4aaa-8aaa-aaaaaaaaaaaa")
+  )
+
+  ;; R2 pin2 (GND top) at (125, 83.69) → wire down to GND power at (125, 95)
+  (wire
+    (pts (xy 125 83.69) (xy 125 95))
+    (stroke (width 0) (type default))
+    (uuid "aaaa000b-aaaa-4aaa-8aaa-aaaaaaaaaaaa")
+  )
+
+  ;; J2 pin1 (VBUS/VBAT) at (96.19, 136.27) → wire down to +5V power at (96.19, 139.5)
+  ;; Wait, +5V power goes UP from (96.19, 139.5) with pin at (96.19, 139.5) angle 90
+  ;; J2 pin1 is at (96.19, 136.27) → +5V is above (smaller Y)
+  ;; +5V power symbol pin at (96.19, 139.5) is BELOW J2 pin1 (136.27)
+  ;; Let me move the +5V for J2 to be above: at (96.19, 132)
+  ;; Actually since Y increases down, 136.27 < 139.5, so 139.5 is BELOW 136.27
+  ;; So J2 pin1 (136.27) is ABOVE J2 center, and we want VBUS to come from above
+  ;; Let me just draw a wire from J2 pin1 to a +5V label above
+  ;; J2 pin1 at (96.19, 136.27) → +5V symbol pin at (96.19, 139.5): wire going DOWN
+  (wire
+    (pts (xy 96.19 136.27) (xy 96.19 139.5))
+    (stroke (width 0) (type default))
+    (uuid "aaaa000c-aaaa-4aaa-8aaa-aaaaaaaaaaaa")
+  )
+
+  ;; J2 pin2 (GND) at (96.19, 133.73) → wire to GND power at (96.19, 130)
+  ;; GND power pin at (96.19, 130) angle 270 → connection at (96.19, 130)
+  ;; J2 pin2 at (96.19, 133.73) → wire UP to (96.19, 130)
+  (wire
+    (pts (xy 96.19 133.73) (xy 96.19 130))
+    (stroke (width 0) (type default))
+    (uuid "aaaa000d-aaaa-4aaa-8aaa-aaaaaaaaaaaa")
+  )
+
+  ;; Junction at GND bus between J1 GND wire and bottom of GND symbol
+  (junction (at 92.38 70) (diameter 0) (color 0 0 0 0)
+    (uuid "bbbb0001-bbbb-4bbb-8bbb-bbbbbbbbbbbb")
+  )
+
+  ;; ─────────────────────────────────────────────────────────────────
+  ;; No-connect marks on D- and D+ pins
+  ;; ─────────────────────────────────────────────────────────────────
+  (no_connect (at 92.38 83.81) (uuid "cccc0001-cccc-4ccc-8ccc-cccccccccccc"))
+  (no_connect (at 92.38 81.27) (uuid "cccc0002-cccc-4ccc-8ccc-cccccccccccc"))
+
+  ;; ─────────────────────────────────────────────────────────────────
+  ;; Sheet instances
+  ;; ─────────────────────────────────────────────────────────────────
+  (sheet_instances
+    (path "/"
+      (page "1")
+    )
+  )
+)

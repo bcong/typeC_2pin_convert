@@ -1,0 +1,32 @@
+(kicad_pcb
+  (version 20240108)
+  (generator "pcbnew")
+  (generator_version "8.0")
+  (general
+    (thickness 1.6)
+    (legacy_teardrops no)
+  )
+  (paper "A4")
+  (layers
+    (0 "F.Cu" signal)
+    (31 "B.Cu" signal)
+    (44 "Edge.Cuts" user)
+  )
+  (setup
+    (pad_to_mask_clearance 0)
+    (allow_soldermask_bridges_in_footprints no)
+    (pcbplotparams
+      (layerselection 0x00010fc_ffffffff)
+      (outputformat 1)
+      (mirror no)
+    )
+  )
+  (net 0 "")
+  (gr_rect
+    (start 0 0) (end 25 40)
+    (stroke (width 0.05) (type default))
+    (fill none)
+    (layer "Edge.Cuts")
+    (uuid "ed100001-ed10-4ed1-8ed1-ed1000000001")
+  )
+)

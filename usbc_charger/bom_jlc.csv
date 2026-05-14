@@ -1,0 +1,4 @@
+﻿Comment,Designator,Footprint,LCSC Part #
+5.1k,"R1,R2",Resistor_SMD:R_0402,C25905
+USB_C_Receptacle,J1,Connector_USB:USB_C_Receptacle_6Pin_4Hole,C7507406
+S2B-PH-SM4-TB,J2,Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horiz,C295747
