@@ -230,15 +230,19 @@
       (at 104 70 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "USB_C_6Pin_Charger"
+    (property "Value" "USB_C_Receptacle"
       (at 104 72 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Connector_USB:USB_C_Receptacle_GCT_USB4085"
+    (property "Footprint" "Connector_USB:USB_C_Receptacle_6Pin_4Hole"
       (at 100 80 0)
       (effects (font (size 1.27 1.27)) (hide yes))
     )
     (property "Datasheet" ""
+      (at 100 80 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (property "LCSC Part #" "C7507406"
       (at 100 80 0)
       (effects (font (size 1.27 1.27)) (hide yes))
     )
@@ -277,6 +281,10 @@
       (at 75 87.5 0)
       (effects (font (size 1.27 1.27)) (hide yes))
     )
+    (property "LCSC Part #" "C25905"
+      (at 75 87.5 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
     (pin "1" (uuid "22222222-2222-4222-8222-222222222211"))
     (pin "2" (uuid "22222222-2222-4222-8222-222222222212"))
   )
@@ -308,6 +316,10 @@
       (at 125 87.5 0)
       (effects (font (size 1.27 1.27)) (hide yes))
     )
+    (property "LCSC Part #" "C25905"
+      (at 125 87.5 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
     (pin "1" (uuid "33333333-3333-4333-8333-333333333311"))
     (pin "2" (uuid "33333333-3333-4333-8333-333333333312"))
   )
@@ -327,7 +339,7 @@
       (at 104 130 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "Battery_Conn_2Pin"
+    (property "Value" "WF-XH2.54-2PZZ"
       (at 104 132 0)
       (effects (font (size 1.27 1.27)))
     )
@@ -336,6 +348,10 @@
       (effects (font (size 1.27 1.27)) (hide yes))
     )
     (property "Datasheet" ""
+      (at 100 135 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (property "LCSC Part #" "C53121322"
       (at 100 135 0)
       (effects (font (size 1.27 1.27)) (hide yes))
     )
